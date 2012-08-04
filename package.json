@@ -1,0 +1,31 @@
+{
+  "name": "liveconf",
+  "author": "Soarez <igorsoarez@gmail.com>",
+  "description": "Perform live updates on JSON configuration files",
+  "tags": [
+    "configuration",
+    "config",
+    "live",
+    "update"
+  ],
+  "version": "0.1.0",
+  "main": "./lib/liveconf",
+  "engines": [
+    "node >= 0.6.0"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Soarez/liveconf.git"
+  },
+  "bugs": {
+    "url": "http://github.com/Soarez/liveconf/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.3.2",
+    "should": "~1.1.0",
+    "lodash": "~0.4.2"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}
