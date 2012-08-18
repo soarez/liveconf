@@ -1,4 +1,8 @@
-## Stack Overflow RSS
+## liveconf
+
+A very simple and barebones configuration module. Just allows runtime configuration objects to be synced with JSON configuration files.
+
+**For a much more solid module on cofiguration, check out [node-config](https://github.com/lorenwest/node-config). **
 
 ### Install
 
