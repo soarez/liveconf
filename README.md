@@ -38,3 +38,7 @@ While the code is running you can change the configuration.
 ```javascript
 console.log(config.b); // bar
 ```
+
+### License
+
+MIT
