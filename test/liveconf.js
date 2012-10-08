@@ -58,7 +58,21 @@ describe('liveconf', function () {
     }, 100)
   })
 
-  it('should cache the configuration objects', function() {
+  it('should cache the configuration objects', function() {
     liveconf(FILE_NAME).should.equal(liveconf(FILE_NAME))
+  })
+  
+  it('should fire a changed event when the config changes', function(done) {
+      
+    config = liveconf(FILE_NAME)
+    var newConfig = { b:'rulio', r:42 }
+
+    setTimeout(function() {
+      fs.writeFileSync(FILE_NAME, JSON.stringify(newConfig))
+    }, 150)
+    
+    config.ee.on('changed', function() {
+        done()
+    })
   })
 })

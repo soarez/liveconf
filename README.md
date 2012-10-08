@@ -43,6 +43,19 @@ While the code is running you can change the configuration.
 console.log(config.b); // bar
 ```
 
+#### Events
+
+Each configuration object exposes an [EventEmitter](http://nodejs.org/api/events.html#events_class_events_eventemitter) through a non-enumerable readonly property `ee`. There is only one event `changed`, fired when the configuration object is changed.
+
+```javascript
+var liveconf = require('liveconf');
+var config = liveconf('config.json');
+
+config.ee.on('changed', function() {
+    // config file has changed
+});
+```
+
 ### License
 
 MIT
